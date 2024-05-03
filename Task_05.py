@@ -49,16 +49,6 @@ plt.ylabel('Top 20 Cities')
 # Show the plot
 plt.show()
 
-plt.tight_layout() 
-
-# Analyze road conditions
-# road_conditions = data['Road_Conditions'].value_counts()
-# plt.bar(road_conditions.index, road_conditions.values)
-# plt.xlabel('Road Conditions')
-# plt.ylabel('Number of Accidents')
-# plt.title('Distribution of Accidents by Road Conditions')
-# plt.show()
-
 
 fig, axes = plt.subplots(1, 2, figsize=(15, 5))
 datasever=data['Severity'][:10]
@@ -101,12 +91,7 @@ class Map:
 coords = [data['Start_Lat'].mean(), data['Start_Lng'].mean()]
 map = Map(center= coords , zoom_start=5)
 map.showMap()
-# # Create a map of accident hotspots
-# accident_map = folium.Map(location=[data['Start_Lat'].mean(), data['Start_Lng'].mean()], zoom_start=5)
-# for index, row in data.sample(1000).iterrows():
-#     folium.Marker([row['Start_Lat'], row['Start_Lng']]).add_to(accident_map)
-# print(accident_map)
-# display(accident_map) 
+
 
 
 
